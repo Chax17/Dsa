@@ -26,6 +26,7 @@ void display()
    {
     cout<<array[i];
    } 
+   cout<<endl;
 }
 int main()
 {
