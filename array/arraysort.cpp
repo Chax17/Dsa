@@ -5,15 +5,15 @@ int size;
 void bubble()
 {
   int temp;
-    for(int i=0;i<size-1;i++)
+    for(int i=0;i<size;i++)
     {
-        for(int j=i;j<size-i-1;j++)
+        for(int j=i+1;j<size;j++)
         {
-            if(array[j]>array[j+1])
+            if(array[i]>array[j])
             {
-            temp=array[j];
-            array[j]=array[j+1];
-            array[j+1]=temp;
+            temp=array[i];
+            array[i]=array[j];
+            array[j]=temp;
             }
         }
     }
@@ -24,6 +24,7 @@ void display()
     {
         cout<<array[i];
     }
+    cout<<endl;
 }
 int main()
 {
@@ -34,7 +35,6 @@ int main()
     {
         cin>>array[i];
     }
-    display();
     cout<<"The sorting is done using bubble sort technique"<<endl;
     bubble();
     display();
